@@ -1,0 +1,77 @@
+[
+  {
+    "id": "company-sales",
+    "category": "Data Science",
+    "title": "Company Sales Analysis",
+    "subtitle": "Power BI · Business intelligence",
+    "summary": "A Power BI dashboard project exploring company sales performance across business categories and presenting trends in a visual reporting format.",
+    "methods": [
+      "Power BI",
+      "Data visualization",
+      "Trend analysis"
+    ],
+    "evidence": "The repository describes company sales analysis and hospital/pharmacy analysis. I have not found a separate public repository or evidence for a predictive machine-learning model, so this card is deliberately described as sales analysis rather than forecasting.",
+    "url": "https://github.com/stacymoraa56-eng/Power-BI"
+  },
+  {
+    "id": "jumia-sales",
+    "category": "Data Science",
+    "title": "Jumia Product Performance Dashboard",
+    "subtitle": "Excel · E-commerce analytics",
+    "summary": "An interactive Excel dashboard exploring Jumia product pricing, discounts, ratings, and customer reviews to understand product performance and customer engagement.",
+    "methods": [
+      "Data cleaning",
+      "Feature engineering",
+      "Pivot tables & charts",
+      "Dashboard design"
+    ],
+    "evidence": "The project cleans product and price fields, engineers discount and rating categories, and explores relationships between discounts, ratings, and reviews. The repository reports a weak relationship between higher discounts and engagement, while higher-rated products tend to attract more reviews.",
+    "url": "https://github.com/stacymoraa56-eng/jumia-sales-analysis"
+  },
+  {
+    "id": "travel-assistant",
+    "category": "Data Science",
+    "title": "East Africa Travel & Hotel RAG Advisor",
+    "subtitle": "Python · Semantic search · Streamlit",
+    "summary": "An accommodation discovery tool combining web scraping, data cleaning, geographic enrichment, semantic retrieval, and an interactive interface for exploring stays across East Africa.",
+    "methods": [
+      "Python",
+      "BeautifulSoup",
+      "SentenceTransformers",
+      "ChromaDB",
+      "FastAPI & Streamlit"
+    ],
+    "evidence": "The repository documents a pipeline from 109 initially collected accommodation records to 99 cleaned records, followed by geographic enrichment, embeddings, ChromaDB indexing, a FastAPI retrieval service, and a Streamlit UI with filters and map visualization. The README notes that a fully generative RAG workflow would additionally require passing retrieved context to a language model.",
+    "url": "https://github.com/stacymoraa56-eng/Travel_Africa_RAG_Project"
+  },
+  {
+    "id": "undergraduate-policy",
+    "category": "Policy & Research",
+    "title": "Digital Surveillance & Technology Governance in Kenya",
+    "subtitle": "Undergraduate research · International relations",
+    "summary": "Academic research examining the implications of US–China rivalry for digital surveillance, digital sovereignty, and technological autonomy in Kenya between 2013 and 2025.",
+    "methods": [
+      "International Relations theory",
+      "Literature synthesis",
+      "Qualitative inquiry",
+      "Policy interpretation"
+    ],
+    "evidence": "The research draws on Realism, Dependency Theory, and World-Systems Theory. The final public description distinguishes the methods proposed in the research design from methods actually completed, and should only state findings supported by the final report.",
+    "url": ""
+  },
+  {
+    "id": "ministry-attachment",
+    "category": "Policy & Research",
+    "title": "Ministry of Foreign and Diaspora Affairs",
+    "subtitle": "Administrative & Research Intern · May–August 2024",
+    "summary": "Experience in the Asia and Pacific Directorate supporting geopolitical and policy research, briefing notes, official documentation, records management, and departmental coordination.",
+    "methods": [
+      "Geopolitical research",
+      "Briefing notes",
+      "Official documentation",
+      "Confidential records"
+    ],
+    "evidence": "Responsibilities included preparing reports and meeting documentation, supporting administrative operations, coordinating meeting logistics, and handling confidential information professionally. Do not publish internal or confidential government documents.",
+    "url": ""
+  }
+]

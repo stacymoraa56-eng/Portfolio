@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stacy Moraa Omwoyo — data analytics, applied AI, international relations, and evidence-informed policy research.">
+  <title>Stacy Moraa Omwoyo | Data, Research & Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go to home"><span class="brand-mark">S.</span><span>Stacy Moraa Omwoyo<span class="brand-dot">/</span>Portfolio</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a><a href="#work">Selected work</a><a href="#policy">Policy & research</a><a href="#contact" class="nav-cta">Let's connect <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> DATA · RESEARCH · PUBLIC POLICY</div>
+        <h1>Turning complex questions into <span class="serif-accent">clear decisions.</span></h1>
+        <p class="hero-intro">I combine data analytics and applied AI with international relations research to investigate complex questions, uncover evidence, and communicate what matters.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">Explore my work <span>↘</span></a>
+          <a class="text-link" href="#contact">Get in touch <span>↗</span></a>
+        </div>
+        <div class="hero-proof">
+          <div><span class="proof-number">01</span><span class="proof-label">Data science<br> & analytics</span></div>
+          <div><span class="proof-number">02</span><span class="proof-label">Policy research<br> & analysis</span></div>
+          <div><span class="proof-number">03</span><span class="proof-label">Evidence-led<br> communication</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Abstract data-inspired artwork">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-core"><span class="core-cross">✳</span><span class="core-caption">Curiosity<br>meets evidence</span></div>
+        <div class="float-card card-top"><span class="mini-icon">↗</span><span><b>Find the signal</b><small>From data to insight</small></span></div>
+        <div class="float-card card-bottom"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span><span><b>Ask better questions</b><small>Research with purpose</small></span></div>
+        <div class="visual-note">NAIROBI, KENYA <span>—</span> OPEN TO OPPORTUNITIES</div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span class="hero-bottom-right">PORTFOLIO / 2026</span></div>
+    </section>
+
+    <section class="intro-band" id="about">
+      <div class="section-wrap intro-grid">
+        <p class="section-kicker">01 / THE PERSPECTIVE</p>
+        <div><h2>Analytical by training.<br><span class="serif-accent">Curious by nature.</span></h2>
+          <p class="body-large">My work sits at the intersection of analytical problem-solving and human context. I use data preparation, dashboards, Python, and applied AI to investigate patterns, while my International Relations background helps me examine the institutions, stakeholders, and policy choices behind the evidence.</p>
+          <div class="skill-pills"><span>Python</span><span>Data analysis</span><span>Machine learning</span><span>Policy research</span><span>Clear communication</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section section-wrap" id="work">
+      <div class="section-heading">
+        <div><p class="section-kicker">02 / SELECTED PROJECTS</p><h2>Evidence over <span class="serif-accent">claims.</span></h2></div>
+        <p class="heading-aside">A closer look at how I explore data, build useful tools, and translate findings into action.</p>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All work <span>05</span></button>
+        <button class="filter" data-filter="Data Science">Data science <span>03</span></button>
+        <button class="filter" data-filter="Policy & Research">Policy & research <span>02</span></button>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        {% for project in projects %}
+        <article class="project-card" data-category="{{ project.category }}">
+          <div class="project-art art-{{ loop.index }}">
+            {% if loop.index == 1 %}<div class="chart-art"><span class="chart-label">SALES / FORECAST</span><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 300 100" aria-hidden="true"><path d="M5 78 C35 65,45 78,72 53 S115 70,145 42 S185 50,210 25 S260 32,295 8" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="295" cy="8" r="4" fill="currentColor"/></svg></div>
+            {% elif loop.index == 2 %}<div class="jumia-art"><span class="big-j">J.</span><span class="floating-tag tag-a">PRODUCTS ↗</span><span class="floating-tag tag-b">SALES DATA</span><div class="dot-matrix"></div></div>
+            {% elif loop.index == 3 %}<div class="travel-art"><div class="sun"></div><div class="travel-route">· · · · · · · · · ·</div><span class="travel-pin pin-a">A</span><span class="travel-pin pin-b">B</span><span class="travel-stamp">GO<br>EXPLORE</span></div>
+            {% elif loop.index == 4 %}<div class="policy-art"><span class="policy-quote">“</span><div class="policy-lines"><i></i><i></i><i></i><i></i></div><span class="policy-seal">RESEARCH<br>NOTE 01</span></div>
+            {% else %}<div class="ministry-art"><span class="building-icon">▥</span><span class="ministry-word">PUBLIC<br>VALUE</span><div class="ministry-lines"><i></i><i></i><i></i></div></div>{% endif %}
+            <span class="project-index">0{{ loop.index }}</span>
+          </div>
+          <div class="project-meta"><span>{{ project.category }}</span><span class="meta-dot">•</span><span>{{ project.subtitle }}</span></div>
+          <h3>{{ project.title }}</h3><p>{{ project.summary }}</p>
+          <div class="tag-list">{% for method in project.methods %}<span>{{ method }}</span>{% endfor %}</div>
+          <details class="evidence-details"><summary>Project notes <span>+</span></summary><p>{{ project.evidence }}</p></details>
+          {% if project.url %}<a class="project-link" href="{{ project.url }}" target="_blank" rel="noreferrer">View repository <span>↗</span></a>{% else %}<span class="project-link muted-link"> <span>↗</span></span>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="policy-band" id="policy">
+      <div class="section-wrap policy-grid">
+        <div><p class="section-kicker">03 / POLICY & RESEARCH</p><h2>Data tells us <span class="serif-accent">what.</span><br>Context helps explain <span class="serif-accent">why.</span></h2></div>
+        <div class="policy-copy"><p class="body-large">With a BA in International Relations from The Catholic University of Eastern Africa (October 2025) and internship experience in the Ministry of Foreign and Diaspora Affairs, I bring a policy lens to research: institutions, stakeholders, implementation, and the implications behind the evidence.</p>
+          <div class="policy-points"><div><span>01</span><p><b>Undergraduate research</b><small>Research on US–China rivalry and digital surveillance, digital sovereignty, and technological autonomy in Kenya (2013–2025).</small></p></div><div><span>02</span><p><b>Ministry attachment</b><small>Policy and geopolitical research, briefing notes, official correspondence, meeting documentation, records management, and coordination in the Asia and Pacific Directorate.</small></p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach-section section-wrap">
+      <p class="section-kicker">04 / HOW I WORK</p><h2>Thoughtful process.<br><span class="serif-accent">Useful outcomes.</span></h2>
+      <div class="approach-grid"><div><span class="approach-num">01</span><h3>Frame the question</h3><p>Clarify the problem, context, audience, and decision that the work should support.</p></div><div><span class="approach-num">02</span><h3>Interrogate evidence</h3><p>Clean, explore, analyze, and test assumptions rather than jumping to conclusions.</p></div><div><span class="approach-num">03</span><h3>Make it useful</h3><p>Communicate findings in a way that helps people understand trade-offs and next steps.</p></div></div>
+    </section>
+
+    <section class="credentials-band">
+      <div class="section-wrap credentials-grid">
+        <div><p class="section-kicker">EDUCATION & DEVELOPMENT</p><h2>Grounded in research.<br><span class="serif-accent">Growing through practice.</span></h2></div>
+        <div class="credentials-list">
+          <div><span class="credential-date">OCT 2025</span><p><b>BA International Relations</b><small>The Catholic University of Eastern Africa · Second Class Honors, Upper Division</small></p></div>
+          <div><span class="credential-date">JUN 2026</span><p><b>Professional Certificate in Data Analytics</b><small>LuxDevHQ</small></p></div>
+          <div><span class="credential-date">TOOLKIT</span><p><b>Analytics & research</b><small>Python · SQL · Microsoft Excel · Power BI · Policy research · Briefing notes · Microsoft Office · Google Workspace</small></p></div> 
+          <div>
+            <span class="credential-date">LANGUAGES</span>
+            <p>
+              <b>English &amp; Swahili</b>
+              <small>Fluent</small>
+              <b>French</b>
+              <small>Working proficiency</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="section-wrap contact-inner"><p class="section-kicker">05 / THE NEXT CHAPTER</p><h2>Have a question worth<br><span class="serif-accent">investigating?</span></h2><p>I'm interested in opportunities where data, research, and policy can make a practical difference.</p><div class="contact-actions"><a class="button button-light" id="emailLink" href="mailto:stacymoraa56@gmail.com">Email me <span>↗</span></a><a class="contact-text" id="githubLink" href="https://github.com/stacymoraa56-eng" target="_blank" rel="noreferrer">GitHub profile ↗</a><a class="contact-text" id="linkedinLink" href="https://www.linkedin.com/in/stacy-omwoyo-2a9427231" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><span class="contact-decoration">S.</span></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">S.</span><span>Stacy Moraa Omwoyo<span class="brand-dot">/</span>Portfolio</span></a><span>Built with curiosity and Python.</span><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
+
